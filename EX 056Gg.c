@@ -32,7 +32,7 @@ int main(){
     if((p.sexo == 'F' ||p.sexo == 'f') && p.idade < 21)
         totalF++;
 
-         if(veio < p.idade && p.sexo == 'M' || p.sexo == 'm'){
+         if(veio < p.idade && (p.sexo == 'M' || p.sexo == 'm')){
             veio = p.idade;
             strcpy(hmaior, p.nome);
             }
