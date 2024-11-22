@@ -7,10 +7,10 @@ int main(void){
     int numero, numerousuario = 999;
     int tentativas = 0;
 
-    srand(time(NULL));
-    numero = rand() % 11;
+    srand(time(NULL)); //Semente para numeros aleatorios diferentes a cada iteração do programa
+    numero = rand() % 11; //Gera um num aleatorio entre 0 e 10
 
-    printf("Escolhi um numero de 1 a 10. Acerte se conseguir!\n");
+    printf("Escolhi um numero de 0 a 10. Acerte se conseguir!\n");
 
     while(numerousuario != numero){
         printf("Digite o seu numero:\n");
