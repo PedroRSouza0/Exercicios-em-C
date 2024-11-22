@@ -15,10 +15,17 @@ int main(void){
     while(numerousuario != numero){
         printf("Digite o seu numero:\n");
         scanf("%d",&numerousuario);
-        tentativas++;
 
-        if(numerousuario != numero)
-            printf("Errado. Tente novamente!\n");
+        if(numerousuario < 0 || numerousuario > 10){
+            printf("Digite um numero entre 0 e 10 porfavor.\n");
+            continue;} //Ignora o restante do loop e volta ao inicio}
+
+            tentativas++; //Só conta as tentativas dentro do limite
+
+        if(numerousuario < numero){
+            printf("Mais... Tente novamente!\n");}
+        else if(numerousuario > numero){
+            printf("Menos... Tente novamente!\n");}
     }
 
     printf("Muito bem! O Numero em que eu escolhi foi o %d e voce precisou de %d tentativas para acertar\n",numero,tentativas);
