@@ -1,5 +1,7 @@
 #include <stdio.h>
 #include <stdbool.h>
+#include <windows.h>
+//#include <unistd.h> somente em ambientes UNIX e LINUX
 
 int soma(int a, int b){ //Função soma
     int somados;
@@ -56,6 +58,8 @@ while(1){ //Enquanto "true"
             scanf("%d",&valor2);
             break;
         case 5:
+            printf("Saindo...\n");
+            Sleep(2000); //Valor em Milisegundos (2000 == 2segundos)
             printf("Fim do programa\n");
             return 0;
         default:
