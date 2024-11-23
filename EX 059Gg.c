@@ -28,7 +28,7 @@ int main(){
     printf("Entre com o segundo numero\n"); //Entrada Valor2
     scanf("%d",&valor2);
 
-while(1){
+while(1){ //Enquanto "true"
 
     tela();
 
