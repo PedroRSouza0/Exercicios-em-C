@@ -20,7 +20,7 @@ void tela(void){ //Função menu tela
 
 int main(){
 
-    int opcao, valor1, valor2;
+    int opcao = 999, valor1, valor2;
     int souma;
     int maior = 0;
 
@@ -30,12 +30,23 @@ int main(){
     printf("Entre com o segundo numero\n"); //Entrada Valor2
     scanf("%d",&valor2);
 
-while(1){ //Enquanto "true"
+while(opcao != 5){ //Enquanto "true"
 
     tela();
 
     printf("Digite sua opcao:\n"); //Entrada dos dados dentro do loop para garantir que ele nao seja infinito
     scanf("%d",&opcao);
+
+    //Abaixo um exemplo de como sair do programa quando usar a condição while(true)
+
+    //while (1) { // Loop infinito
+      //  printf("Escolha uma opcao (digite 5 para sair): ");
+        //scanf("%d", &opcao);
+
+        //if (opcao == 5) {
+          //  printf("Encerrando o programa...\n");
+            //break; // Sai do loop
+        //}
 
     switch(opcao){
         case 1:
@@ -45,7 +56,7 @@ while(1){ //Enquanto "true"
         case 2:
             printf("Valores multiplicados = %d\n",valor1 * valor2);
             break;   
-        case 3: 
+        case 3: // Fazer verificação para os valores iguais
             if(valor1 > valor2){
                 maior = valor1;}
             else{
@@ -61,10 +72,12 @@ while(1){ //Enquanto "true"
             printf("Saindo...\n");
             Sleep(2000); //Valor em Milisegundos (2000 == 2segundos)
             printf("Fim do programa\n");
-            return 0;
+            break;
         default:
             printf("Opcao invalida. Porfavor digite uma das opcoes.\n");
             break;        
         }
     }
+    printf("\nMuito Obrigados por usar o programa!\n");
+    return 0;
 }
