@@ -7,10 +7,13 @@ int main(){
     printf("Insira seu numero\n");
     scanf("%d",&numero);
 
-while(numero >= 1){
+while(numero > 0){
 
     total *= numero;
-    printf("%d x ",numero);
+    if(numero > 1) // Formatação da saída
+        printf("%d x ",numero);
+    else    
+        printf("%d ",numero);    
     numero--;
 }
     printf("\nTotal = %d\n",total);
