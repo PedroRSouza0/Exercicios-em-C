@@ -50,30 +50,40 @@ while(opcao != 5){ //Enquanto "true"
 
     switch(opcao){
         case 1:
+            system("cls");
             souma = soma(valor1, valor2);
             printf("A soma foi : %d\n",souma);
             break;
         case 2:
+            system("cls");
             printf("Valores multiplicados = %d\n",valor1 * valor2);
             break;   
         case 3: // Fazer verificação para os valores iguais
-            if(valor1 > valor2){
-                maior = valor1;}
-            else{
-                maior = valor2;}
-            printf("O maior valor foi %d\n",maior);
+            system("cls");
+            if(valor1 == valor2){
+                printf("Os valores sao iguais!\n");
+            }
+            else{    
+                if(valor1 > valor2)
+                    maior = valor1;
+                else
+                    maior = valor2;
+                    printf("O maior valor foi %d\n",maior);}
             break;
         case 4:
+            system("cls");
             printf("Insira novos valores\n");
             scanf("%d",&valor1);
             scanf("%d",&valor2);
             break;
         case 5:
+            system("cls");
             printf("Saindo...\n");
             Sleep(2000); //Valor em Milisegundos (2000 == 2segundos)
             printf("Fim do programa\n");
             break;
         default:
+            system("cls");
             printf("Opcao invalida. Porfavor digite uma das opcoes.\n");
             break;        
         }
