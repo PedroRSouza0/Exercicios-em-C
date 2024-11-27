@@ -44,6 +44,7 @@ int main(){
     }
     printf("Saindo do programa...");
     Sleep(2000);
+    printf("\nPrograma executado com %d progressoes aritimeticas.",termos);
     printf("\nFIM\n");
     return 0;
 }
