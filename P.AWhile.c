@@ -5,7 +5,7 @@
 int main(){
 
     int primeiro, razao;
-    int i = 0, j = 0; // Contador
+    int i = 0; // Contador
     int termos = 10, novo;
     char resposta = ' ';
 
@@ -20,26 +20,27 @@ int main(){
         primeiro += razao;
         i++;
     }
+    printf("FIM");
 
     while(resposta != 'n' && resposta != 'N'){
         printf("\nGostaria de mais termos?[s/n]\n");
         scanf(" %c",&resposta);
 
 
-        if (resposta != 'n' || resposta != 'N'){
-            break;
-        }    
-        printf("Insira quantos termos\n");
-        scanf("%d",&novo);
+        if (resposta != 'n' && resposta != 'N'){
+            printf("Insira quantos termos\n");
+            scanf("%d",&novo);
 
-        termos += novo;
+            termos += novo;
 
-        while(i < termos){
-            printf("%d ",primeiro);
-            primeiro += razao;
-            i++;
+            while(i < termos){
+                printf("%d ",primeiro);
+                primeiro += razao;
+                i++;
+            }
+            printf("PAUSE");
         }
-        printf("\nNova P.A!\n");
+        
     }
     printf("Saindo do programa...");
     Sleep(2000);
