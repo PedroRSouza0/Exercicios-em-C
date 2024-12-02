@@ -2,7 +2,8 @@
 
 int main(void){
 
-    int num = 0, maior, menor, soma = 0, media = 0;
+    int num = 0, maior, menor, soma = 0; 
+    float media = 0;
     int termos = 0;
  
     printf("Digite um numero:[999] para parar]\n");
@@ -28,7 +29,7 @@ while(num != 999){
 
     printf("\nFEEDBACK FINAL\n");
     printf("Soma dos numeros = %d\n",soma);
-    printf("Media = %d\n",media);
+    printf("Media = %.1f\n",media);
     printf("Maior e menor numeros = %d  / %d \n",maior, menor);
 
     return 0;
