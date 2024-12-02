@@ -2,15 +2,13 @@
 
 int main(void){
 
-    int num, maior = 0, menor = 0, soma = 0, media;
+    int num = 0, maior = 0, menor = 0, soma = 0, media = 0;
     int termos = 0;
-    int opcao = ' ';
-
-while(num != 999){
+ 
     printf("Digite um numero:[999] para parar]\n");
     scanf("%d",&num);
 
-    if(num != 999){
+while(num != 999){
     termos++;
     maior = num;
     if (num > maior)
@@ -19,8 +17,11 @@ while(num != 999){
         num = menor; 
 
     soma += num;
-    media = soma/termos;}       
-}
+    media = soma/termos;
+    
+    printf("Digite um numero:[999] para parar]\n");
+    scanf("%d",&num);}       
+
     printf("FEEDBACK FINAL\n");
     printf("Soma dos numeros = %d\n",soma);
     printf("Media = %d\n",media);
