@@ -2,14 +2,25 @@
 
 int main(void){
 
-    int num = 0, maior, menor, soma = 0; 
+    int num = 0, maior = 0, menor = 0, soma = 0; 
     float media = 0;
     int termos = 0;
     char opcao = 'S';
-    
+
+
 while(opcao != 'n' && opcao != 'N'){
-    printf("Digite um numero:\n);
+    printf("Digite um numero:\n");
     scanf("%d",&num);
+
+    if(termos == 1){
+        maior = num;
+        menor = num;
+    }
+    else
+        if(num > maior){
+            maior = num;}
+        if(num < menor){
+            menor = num;}    
     
     termos++; 
     soma += num;
