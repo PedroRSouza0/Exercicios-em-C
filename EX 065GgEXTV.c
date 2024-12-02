@@ -5,21 +5,11 @@ int main(void){
     int num = 0, maior, menor, soma = 0; 
     float media = 0;
     int termos = 0;
-    char opcao;
-
-    printf("Digite um numero:\n");
-    scanf("%d",&num);
-
-    maior = num; //Primeiro termo
-    menor = num; 
-    termos++; 
-    soma += num;
-    media = soma/termos;
-
-    printf("Deseja continuar?[S/N]\n");
-    scanf(" %c",&opcao);
+    char opcao = 'S';
     
 while(opcao != 'n' && opcao != 'N'){
+    printf("Digite um numero:\n);
+    scanf("%d",&num);
     
     termos++; 
     soma += num;
@@ -30,10 +20,6 @@ while(opcao != 'n' && opcao != 'N'){
     }
     if(num < menor)
         menor = num;
-        
-    
-    printf("Digite um numero:\n");
-    scanf("%d",&num);
     
     printf("Deseja continuar?[S/N]\n");
     scanf(" %c",&opcao);
