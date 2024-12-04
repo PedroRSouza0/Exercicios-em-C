@@ -9,8 +9,8 @@ int main(){
         printf("Digite um numero [999 p/SAIR]\n");
         scanf("%d",&numero);
 
-        if(numero == 999)
-            break;
+        if(numero == 999){
+            break;}
 
         total++;
         soma += numero;    
